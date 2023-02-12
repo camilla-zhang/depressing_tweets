@@ -1,5 +1,5 @@
 # Detecting Depression on Twitter
-___
+
 
 ## Project Overview
 ___
