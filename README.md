@@ -41,6 +41,8 @@ The results from all models are as follows:
 * Logistic - GloVe: 55%
 * SVM - GloVe: 55%
 
+![image](https://raw.githubusercontent.com/camilla-zhang/depressing_tweets/master/figures/model_performance.png)
+
 ### Limitations
 ___
 
