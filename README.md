@@ -7,9 +7,14 @@ Twitter posts can be a valuable source to find clues that hint to the presence o
 
 ### Data and Methods
 ___
+
+Data:
+
 The data for predictive modeling includes 2,934 twitter posts from 2/8/2023 collected through the Twitter API, with exactly half being classified as depressed, and the other half deemed not depressed. Those that indicate depression are obtained by entering into the query relevant keywords closely associated with depressed behavior, such as “depression”, “antidepressants”, “anxiety”, etc. I then manually remove any tweets that that use these keywords casually and don't have enough information to show that the user is depressed. I also remove tweets that use them to describe negative emotional experience, but is not an official diagnosis (i.e. hair depression, post-concert depression, etc). Finally, I remove depressed keywords during the tokenization process to reduce overfitting. The tweets not indicating depression on the other hand, contains normal content and is filtered to exclude any data that indicates depression by omitting tweets that contain the same keywords aforementioned. To increase noise, I include some of the tweets that use the depressed keywords casually.
 
-These data are then fed into nine machine learning models, all of which are fine tuned and use various word embedding techniques. Namely, we focus on the following approaches: logistic, support vector machine, and neural networks. For the word embedding, we apply the bag of words, TF-IDF, and GloVe techniques on the logistic and support vector models. For the neural networks, we use the Keras embedder and BERT. To determine model performance, I analyze accuracy, precision, and recall, but pay most of the attention towards precision
+Methods:
+
+These data are fed into nine machine learning models, all of which are fine tuned and use various word embedding techniques. Namely, we focus on the following approaches: logistic, support vector machine, and neural networks. For the word embedding, we apply the bag of words, TF-IDF, and GloVe techniques on the logistic and support vector models. For the neural networks, we use the Keras embedder and BERT. To determine model performance, I analyze accuracy, precision, and recall, but pay most of the attention towards precision
 
 The project also considers sentiment, the use of emojis, and word frequency.
 The sentiment analysis compares the distribution of the Vader composite scores between depressed and not depressed tweets. To analyze the emojis used in depressed tweets, I also collected xxx tweets that containing emojis from 2/11/2023, with each tweet also assigned to the binary classification of indicating depressed or not.  This data is then used to compare the top 15 most popular emojis used between depressed and normal tweets. Finally, I display the top 15 most significant features (in terms of word frequency), as well as the 15 least significant. 
