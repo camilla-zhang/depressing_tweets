@@ -9,7 +9,6 @@ Twitter posts can be a valuable source to find clues that hint to the presence o
 ___
 The data for predictive modeling includes 2,934 twitter posts from 2/8/2023 collected through the Twitter API, with exactly half being classified as depressed, and the other half deemed not depressed. Those that indicate depression are obtained by entering into the query relevant keywords closely associated with depressed behavior, such as “depression”, “antidepressants”, “anxiety”, etc. I then manually remove any tweets that that use these keywords casually and don't have enough information to show that the user is depressed. I also remove tweets that use them to describe negative emotional experience, but is not an official diagnosis (i.e. hair depression, post-concert depression, etc). Finally, I remove depressed keywords during the tokenization process to reduce overfitting. The tweets not indicating depression on the other hand, contains normal content and is filtered to exclude any data that indicates depression by omitting tweets that contain the same keywords aforementioned. To increase noise, I include some of the tweets that use the depressed keywords casually.
 
-
 ### Methods
 ___
 
@@ -21,6 +20,7 @@ The sentiment analysis compares the distribution of the Vader composite scores b
 ### Results
 ___
 The sentiment analysis results show that while both depressed and not depressed both have a relatively similar positive Vader score, those that are indicative of depression have a much stronger negative score and a composite score that is more negative than positive.  
+![image](https://raw.githubusercontent.com/camilla-zhang/depressing_tweets/master/images/depressed_wordcloud.png)
 
 The emoji analysis finds that the depressed tweets are more closely associated with the crying face, upside down face, melting face, weary face, and pensive face, whereas the  normal tweets are more closely tied to the blue diamond, fire sign, heart hands, and smiling face with hearts.
 
