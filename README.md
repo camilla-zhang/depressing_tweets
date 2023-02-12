@@ -24,12 +24,16 @@ We also find that the Neural Network, with 3 hidden and 1 dropout layer has the 
 
 The results from all models are as follows:
 
-Neural Net (3 Hidden Layers) - Keras: 91%
-Neural Net - Keras: 89%
-Logistic - TF-IDF: 80%
-Neural Net - BERT: 80%
-SVM - TF-IDF: 78%
-SVM - Bag of Words: 76%
-Logistic - Bag of Words: 74%
-Logistic - GloVe: 55%
-SVM - GloVe: 55%
+* Neural Net (3 Hidden Layers) - Keras: 91%
+* Neural Net - Keras: 89%
+* Logistic - TF-IDF: 80%
+* Neural Net - BERT: 80%
+* SVM - TF-IDF: 78%
+* SVM - Bag of Words: 76%
+* Logistic - Bag of Words: 74%
+* Logistic - GloVe: 55%
+* SVM - GloVe: 55%
+
+### Limitations
+___
+Despite the methods used to deal with any complications, there are also some limitations of the study that should be acknowledged for future studies to consider. First, most research using social media data runs into the issue of sarcasm. While this research does not come across this issue very severely, even before manually removing irrelevant tweets from the data, it is still difficult to recognize tweets that appear genuine without understanding the the author of the post themselves. Additionally, this study is primarily focused on diagnosis of depressive disorder rather than other prevalent mental illnesses, such as anxiety disorder, even when we include ‘anxiety’ as part of our keywords list. Lastly, only five keywords are used to identify tweets from depressed users. Thus, we encourage future researchers to include a wider scope of keywords to include a broader range of tweets hinting to depression in terms of context, such as hopeless, sad, lonely, suicide, etc. 
